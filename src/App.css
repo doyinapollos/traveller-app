@@ -1,38 +1,192 @@
 .App {
-  text-align: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(208, 255, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav--bar {
+    width: 90%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo--div {
+    margin-left: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+    width: 100px;
+    height: 70px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav--bar--ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.list--item {
+    margin-right: 20px;
+}
+
+.main {
+    width: 100%;
+    height: 80vh;
+}
+
+.main--pic {
+    width: inherit;
+    height: inherit;
+}
+
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 214, 127);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer--ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.h1--div {
+    margin-left: 30px;
+}
+
+.footer--list--item {
+    margin-right: 35px;
+}
+
+.desti--div {
+    width: 100%;
+    height: 80vh;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+.desti--input {
+    width: 200px;
+    height: 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+    z-index: 1;
+    border: none;
+}
+
+.desti-place-holder--pic {
+    width: 100vw;
+    height: 80vh;
+}
+
+.recreation--div {
+    width: 100%;
+    height: 80vh;
+}
+
+.recreation--input {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    position: relative;
+    bottom: -30px;
+    margin-left: 20px;
+    z-index: 1;
+}
+
+.recreation-place-holder--pic {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    top: -30px;
+}
+
+.advice--div {
+    width: 100%;
+    height: 80vh;
+}
+
+.advice--input {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    position: relative;
+    bottom: -60px;
+    margin-left: 25px;
+    z-index: 1;
+}
+
+.advice-place-holder--pic {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    top: -30px;
+}
+
+.place--card {
+    width: 220px;
+    height: 240px;
+    background-color: aquamarine;
+}
+
+.place--card--img--div {
+    width: 220px;
+    height: 140px;
+    background-color: aqua;
+}
+
+.place--img {
+    width: 220px;
+    height: 140px;
+}
+
+.card--section {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    justify-content: center;
+    /*
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    margin-top: 0px;
+    */
+}
+
+.desti--card {
+    margin: 10px;
+}
+
+.whether--card--div {
+    width: 200px;
+    height: 240px;
+    background-color: brown;
+}
+
+.attraction--card--div {
+    width: 230px;
+    height: 250px;
+    background-color: bisque;
+}
+
+.attraction--img {
+    width: 230px;
+    height: 110px;
 }
