@@ -8,18 +8,31 @@ function WeatherCard() {
   return (
     <div className='whether--card'>
         <div className="whether--card--div">
-            <p>{checkWeather.sys.name}</p>
-            <p>{checkWeather.location.country}</p>
-            <p>{checkWeather.current.temp_c}</p>
-            <p>{checkWeather.current.temp_f}</p>
-            <p>{checkWeather.location.localtime}</p>
-            <p>{checkWeather.location.lat}</p>
-            <p>{checkWeather.location.lon}</p>
-           
-            
+         
+        <div className='weather--card--1'>
+            <p>Name: {checkWeather.name}</p>
+            <p>Region: {checkWeather.region}</p>
+            <p>Country: {checkWeather.country}</p>
+            <p>Tz_Id: {checkWeather.tz_id}</p>
+            <p>Local time: {checkWeather.localtime}</p>
+          </div>
+
+          
+             
         </div>
     </div>
   )
 }
 
 export default WeatherCard;
+
+/*
+<div className='weather--card--2'>
+            <p>Description: {checkWeather.current.condition.text}</p>
+            <p>Temperature: {checkWeather.current.temp_c}</p>
+            <img src={checkWeather.current.condition.icon} alt='icon' />
+            <p>Latitude: {checkWeather.location.lat}</p>
+            <p>Longitude: {checkWeather.location.lon}</p>
+          </div>
+
+*/

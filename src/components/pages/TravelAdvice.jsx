@@ -20,19 +20,29 @@ function TravelAdvice() {
         .catch(err => {
           console.log(err)
         });
-   dispatch(getAdvice(response.data))
+        console.log(response.data)
+        dispatch(getAdvice(response.data))
+   
   
   }
 
-  useEffect(() => {
-    getTravelData();
-  }, []);
+ // useEffect(() => {
+  //  getTravelData();
+  //}, []);
 
-  console.log(travelAdvice)
+  //console.log(travelAdvice)
+
+  const getItem = (e) => {
+    console.log(getTravelData(e.target.value))
+  }
 
   return (
     <div className='travel'>
-      <Card />
+      <input className='advice--input' type="text" placeholder='ask' onChange={getItem} />
+      
+      <div className='card--component--div'>
+         <Card />
+      </div>
     </div>
   )
 

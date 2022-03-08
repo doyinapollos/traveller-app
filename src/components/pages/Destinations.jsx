@@ -16,26 +16,35 @@ function Destinations() {
   const dispatch = useDispatch();
 
 
-  const getWeatherInfo = async () => {
+  const getWeatherInfo = async (city) => {
      const response = await axios.get(
-       `http://api.weatherapi.com/v1/current.json?key=${app_key}&q=Lagos&aqi=no`
+       `http://api.weatherapi.com/v1/current.json?key=${app_key}&q=${city}&aqi=no`
        )
        .catch((err) => {
       console.log(err)
      })
      console.log(response.data)
-     dispatch(getWeather(response.data))
+     dispatch(getWeather(response.data.location))
+    
+     
      
   }
 
-  useEffect(() => {
-    getWeatherInfo()
-  }, []);
+  //useEffect(() => {
+  //  getWeatherInfo()
+  //}, []);
+  
+
+  const weatherData = (e) => {
+    console.log(getWeatherInfo(e.target.value))
+  }
 
    
   return (
      <div className='destination'>
-
+     
+     <input type = "text" placeholder='search weather for city' onChange={weatherData} />
+      
      <WeatherCard />
 
      </div>

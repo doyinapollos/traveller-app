@@ -9,24 +9,25 @@ function Card() {
   const {id, title, category, country, image} = adv;
   
       return (
-        <div className='card'>
-          <div className="place--card">
-              <div className="place--card--img--div">
-                  <img className='place--img' src= {image} alt='show' />
-              </div>
-              <span>{title}</span><br /> 
-              <span>{category}</span><br />
-              <p>{country}</p><br />
-              <span>see complete recipe</span>
+        
+          <div className='card'>
+            <div className="place--card" id={id}>
+                <div className="place--card--img--div">
+                    <img className='place--img' src= {image} alt='show' />
+                </div>
+                <span>{title}</span><br /> 
+                <span>{category}</span><br />
+                <p>{country}</p><br />
+            </div>
           </div>
-    </div>
+        
          
       )
  })
 
   return (
     <>
-      {takeAdvice}
+      {takeAdvice.length ? <div className='card--section'>{takeAdvice}</div> : <div className='advice--div'><img className='advice-place-holder--pic' src='https://travelwest.info/app/uploads/2021/11/Safer-travel-guidance_21.jpg' alt='' /> </div>}
 
     </>
   )

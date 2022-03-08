@@ -12,7 +12,7 @@ function Header() {
             <div className="nav--bar--ul--div">
                 <ul className='nav--bar--ul'>
                     <li className='list--item'><Link to='/'>Home</Link></li>
-                    <li className='list--item'><Link to='/destinations'> Destinations</Link></li>
+                    <li className='list--item'><Link to='/destinations'>Weather</Link></li>
                     <li className='list--item'><Link to='/recreations'> Recreation Centers </Link></li>
                     <li className='list--item'><Link to='/advice'> Travel Advice </Link></li>
 
