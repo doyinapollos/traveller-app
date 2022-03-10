@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import axios from 'axios';
 import WeatherCard from './card/WeatherCard';
 import { useDispatch, useSelector } from 'react-redux';
-import { getWeather } from '../../redux/actions/actioncreator';
+import { getCurrentWeather, getWeather } from '../../redux/actions/actioncreator';
 
 
 //const API_OPEN_KEY = "00ad63b04eaae362fc0917824e50aa61"
@@ -13,7 +13,9 @@ const app_key = "dd859ebb0301432084b144832220403"
 
 function Destinations() {
   const checkWeather = useSelector((state) => state);
+  const checkCurrentWeather = useSelector((state) => state);
   const dispatch = useDispatch();
+  const currentDispatch = useDispatch();
 
 
   const getWeatherInfo = async (city) => {
@@ -25,9 +27,18 @@ function Destinations() {
      })
      console.log(response.data)
      dispatch(getWeather(response.data.location))
-    
-     
-     
+       
+  }
+
+  const getCurrentWeatherInfo = async (city) => {
+    const response = await axios.get(
+      `http://api.weatherapi.com/v1/current.json?key=${app_key}&q=${city}&aqi=no`
+      )
+      .catch((err) => {
+     console.log(err)
+    })
+    console.log(response.data)
+    currentDispatch(getCurrentWeather(response.data.current))
   }
 
   //useEffect(() => {
@@ -37,6 +48,7 @@ function Destinations() {
 
   const weatherData = (e) => {
     console.log(getWeatherInfo(e.target.value))
+    console.log(getCurrentWeatherInfo(e.target.value))
   }
 
    

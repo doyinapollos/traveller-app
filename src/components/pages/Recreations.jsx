@@ -36,9 +36,10 @@ function Recreations() {
   }, []);
 
   return (
-    <div className='recreation'>
-      <RecreationCard />
+    <div className='recreation--main--div'>
+        <div className='recreation--div'>
 
+        </div>
     </div>
   )
 
@@ -46,6 +47,8 @@ function Recreations() {
 }
 
 export default Recreations
+
+//<RecreationCard />
 
 //<img className='recreation-place-holder--pic' src='https://www.indiana.edu/images/hoosier-life/hoosier-life-aquatics.jpg' alt='' />
 

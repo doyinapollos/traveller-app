@@ -5,6 +5,8 @@ function WeatherCard() {
 
   const checkWeather = useSelector((state) => state.weatherReducer.checkWeather);
 
+  const checkCurrentWeather = useSelector((state) => state.currentWeatherReducer.checkCurrentWeather);
+
   return (
     <div className='whether--card'>
         <div className="whether--card--div">
@@ -17,8 +19,14 @@ function WeatherCard() {
             <p>Local time: {checkWeather.localtime}</p>
           </div>
 
-          
-             
+          <div className='weather--card--2'>
+           
+            <p>Temperature: {checkCurrentWeather.temp_c}</p>
+            
+            <p>Latitude: {checkWeather.lat}</p>
+            <p>Longitude: {checkWeather.lon}</p>
+          </div>
+
         </div>
     </div>
   )

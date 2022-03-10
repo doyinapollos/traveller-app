@@ -2,6 +2,7 @@
 
 export const ActionTypes = {
      WEATHER: "WEATHER",
+     CURRENT_WEATHER: "CURRENT_WEATHER",
      RECREATION: "RECREATION",
      ADVICE: "ADVICE"
 }

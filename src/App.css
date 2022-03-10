@@ -31,6 +31,7 @@
 .nav--bar--ul {
     list-style-type: none;
     display: flex;
+    margin-top: 15px;
 }
 
 .list--item {
@@ -39,12 +40,23 @@
 
 .main {
     width: 100%;
-    height: 80vh;
+    height: 500px;
+    background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/newscms/2017_20/2000986/170515-better-travelling-healthy-london-se-521p.jpg");
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.main--pic {
-    width: inherit;
-    height: inherit;
+#carouselExampleDark {
+    width: 60%;
+    height: 450px;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
 }
 
 .footer {
@@ -94,9 +106,21 @@ a {
     height: 80vh;
 }
 
-.recreation--div {
+.recreation--main--div {
     width: 100%;
     height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recreation--div {
+    width: 70%;
+    height: 80vh;
+    background-image: url("https://edscantravels.ng/wp-content/uploads/2021/06/Beautiful-Recreational-Spots-in-Lagos-scaled.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .recreation--input {

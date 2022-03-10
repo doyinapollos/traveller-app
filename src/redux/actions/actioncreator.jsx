@@ -7,6 +7,13 @@ export const getWeather = (weatherInfo) => {
     }
 }
 
+export const getCurrentWeather = (currentInfo) => {
+    return {
+        type: ActionTypes.CURRENT_WEATHER,
+        payload: currentInfo
+    }
+}
+
 export const getRecreation = (recreationInfo) => {
     return {
         type: ActionTypes.RECREATION,
